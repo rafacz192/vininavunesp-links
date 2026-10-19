@@ -1,0 +1,11 @@
+{
+  "apresentacao": "[TEXTO DE APRESENTAÇÃO]",
+  "links": [
+    { "titulo": "Materiais Vunesp gratuitos", "url": "https://drive.google.com/drive/folders/1wOi_0Vf27L2mAySuRkLDWumeiOdA9xAS", "destaque": true },
+    { "titulo": "Apostilas", "url": "https://vininavunesp.3dprintlabs.com.br/apostilas", "destaque": false },
+    { "titulo": "Apostila de Física Discursiva", "url": "https://vininavunesp.3dprintlabs.com.br/fisica", "destaque": false },
+    { "titulo": "Apostila de Botânica Discursiva", "url": "https://vininavunesp.3dprintlabs.com.br/botanica", "destaque": false },
+    { "titulo": "Professores parceiros", "url": "https://vininavunesp.3dprintlabs.com.br/professores", "destaque": false },
+    { "titulo": "Instagram", "url": "[INSTAGRAM DO VINI]", "destaque": false }
+  ]
+}

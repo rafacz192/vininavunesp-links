@@ -1,0 +1,147 @@
+/* Vini na Vunesp · página de links. Identidade do site: marinho com o
+   pontilhado de rascunho, vermelho de destaque, amarelo de acento, Poppins
+   Bold nos títulos e Source Sans 3 nos textos (fontes servidas daqui). */
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fontes/poppins-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fontes/source-sans-3-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fontes/source-sans-3-600.woff2") format("woff2");
+}
+
+:root {
+  --marinho: #192863;
+  --vermelho: #E03A1E;
+  --amarelo: #F5C21B;
+  --claro: #E4E7F2;
+  --f-titulo: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --f-texto: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--marinho);
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, .1) 1.1px, transparent 1.6px);
+  background-size: 24px 24px;
+  color: #fff;
+  font: 400 18px/1.5 var(--f-texto);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Faixa da marca 7:2:1 */
+.faixa {
+  height: 8px;
+  background: linear-gradient(90deg, var(--marinho) 0 70%, var(--vermelho) 70% 90%, var(--amarelo) 90% 100%);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08);
+}
+
+.pagina {
+  flex: 1;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px 16px 24px;
+}
+.topo { margin: 0 0 12px; }
+.logo {
+  display: block;
+  width: 220px;
+  max-width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+.apresentacao {
+  max-width: 34ch;
+  margin: 0 auto 24px;
+  color: var(--claro);
+  font-size: 18px;
+  text-align: center;
+}
+
+.links {
+  display: grid;
+  gap: 14px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  padding: 14px 20px;
+  border: 2px solid #fff;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--marinho);
+  font: 700 17px/1.25 var(--f-titulo);
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, .18);
+  transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+}
+.botao:hover { background: #F4F6FA; transform: translateY(-2px); box-shadow: 0 8px 0 rgba(0, 0, 0, .18); }
+.botao:active { transform: translateY(2px); box-shadow: 0 3px 0 rgba(0, 0, 0, .18); }
+.botao--destaque { border-color: var(--amarelo); background: var(--amarelo); font-size: 18px; }
+.botao--destaque:hover { background: #F8CF45; }
+.botao:focus-visible, .rede:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+.botao--destaque:focus-visible { outline-color: #fff; }
+
+.rodape { text-align: center; }
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.rede {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, .1);
+}
+.rede:hover { background: var(--vermelho); }
+.assinatura {
+  margin: 16px 0 20px;
+  color: var(--claro);
+  font: 700 13px/1 var(--f-titulo);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+  .pagina { padding-top: 56px; }
+  .logo { width: 260px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .botao { transition: none; }
+  .botao:hover, .botao:active { transform: none; }
+}
